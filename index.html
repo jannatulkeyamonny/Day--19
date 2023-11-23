@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19</title>
+    <style>
+        #static{
+            height: 10vw;
+            border: 3px solid green;
+            border-radius: 8px;
+            position: static;
+                }
+
+                #relative{
+            height: 10vw;
+            border: 3px solid green;
+            border-radius: 8px;
+            position: relative;
+                }   
+
+                #fixed{
+            height: 5vw;
+            border: 3px solid yellow;
+            border-radius: 8px;
+            position: fixed;
+                }
+
+                #absolute{
+            height: 5vw;
+            border: 3px solid blue;
+            border-radius: 8px;
+            position: absolute;
+            margin: 30px;
+            margin-left: 50px;
+                }
+
+                    
+                #sticky{
+            height: 10vw;
+            border: 3px solid green;
+            border-radius: 8px;
+            position: sticky;
+            margin-top:50px;
+                }
+
+                        div{
+                            text-align: center;
+                            font-size: larger;
+                            font-weight:bold;
+                        }
+                        .visible{
+                                background-color: blue;
+                                overflow: visible;
+                                height: 10vw;
+
+                        }
+
+                        .hidden{
+                                background-color: blue;
+                                overflow: hidden;
+                                height: 10vw;
+                                margin-top: 100px;
+
+                        }
+
+                        .scroll{
+                                background-color: yellow;
+                                overflow: scroll;
+                                height: 10vw;
+                                margin-top: 40px;
+
+                        }
+
+                        .auto{
+                                background-color: violet;
+                                overflow: auto;
+                                height: 10vw;
+                                margin-top: 40px;
+
+                        }
+                        .float{
+                            height: 150px;
+                            width: 50vw;
+                            background-color: chocolate;
+
+                        }
+                        .text{
+                            height: 130px;
+                            width: 300px;
+                            background-color: skyblue;
+                            margin: 10px 10px 10px 10px;
+                            float: left;
+                        }
+                        .image{
+                            height: 130px;
+                            width: 150px;
+                            background-color: skyblue;
+                            margin: 10px 10px 10px 10px;
+                            float: right;
+                        }
+                        ul{
+                            list-style-type: none;
+                        }
+                        .dropdown-a{
+                            position: relative;
+                        }
+                        .dropdown-b{
+                            display: none;
+                            background-color: rgb(203, 205, 205);
+                            min-width: 160px;
+                            box-shadow: 0px 8px 16px 0px rgb(52, 42, 42);
+                            padding: 12px 16px;
+                            z-index: 1;
+                         }
+                        .dropdown-a:hover .dropdown-b{
+                            display: block;
+                        }
+
+                        img{
+                            opacity: 0.5;
+                        }
+                        img:hover{
+                            opacity: 1.0;
+                        }
+                        div.gallery{
+                            margin: 5px;
+                            border:1 px solid rgb(62, 117, 138);
+                            float:left;
+                            width: 200px;
+                        }
+                        div.gallery:hover{
+                            border: 2px solid rgb(81, 68, 95) ;
+
+                        }
+                        div.gallery img {
+                            width:100%;
+                            height: auto;
+                        }
+                        
+    </style>
+</head>
+<body>
+<h1>Position</h1>
+<div id="static">Static</div>
+<br>
+<div id="relative">relative</div>
+<br>
+<div id="fixed">fixed</div>
+<br>
+<br>
+<br>
+<div id="absolute">absolute</div>
+<br>
+<br>
+<br>
+<div id="sticky">Sticky</div>
+<br>
+<br>
+<br>
+<h1>Overflow</h1>
+<div class="visible">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem ducimus sunt temporibus nihil exercitationem porro saepe! Eos eius voluptas, deserunt dolores laudantium laboriosam dicta asperiores corrupti aut. Blanditiis, delectus rerum!</div>
+<div class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cupiditate perferendis eaque excepturi ut nobis, soluta vel ad voluptates numquam optio nam deleniti fugit vero perspiciatis! Eveniet, illum hic! Non?</div>
+<div class="scroll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae odit sit quasi quia voluptatem eaque ipsa quos est enim, facilis ullam sunt dolore eos, earum incidunt non assumenda architecto at.</div>
+<div class="auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae modi totam autem sit tenetur eaque fugiat officia hic similique velit, quidem vero fuga adipisci praesentium aspernatur eius dolorum. Nihil?</div>
+<br>
+<br>
+<h1>Float</h1>
+<div class="float">
+<div class="text">Text</div>
+<div class="image">Image</div>
+</div>
+<br>
+<br>
+<div>
+    <h1>Navigation</h1>
+    <ul>
+        <li style="display:inline;background-color: lightblue"><a style="text-decoration:none" href="https://linkedin.com">Home</a></li>
+        <li style="display:inline;background-color: lightblue"><a style="text-decoration:none" href="https://twitter.com">About</a></li>
+        <li style="display:inline;background-color: lightblue"><a style="text-decoration:none" href="https://youtube.com">Contact</a></li>
+        <li style="display:inline;background-color: lightblue"><a style="text-decoration:none" href="https://foodpanda.com">News</a></li>
+
+    </ul>
+</div>
+<br>
+<h1>Dropdown</h1>
+<div class="dropdown-a">
+    <span>Dropdown content</span>
+    <div class="dropdown-b">
+        <p>Home</p>
+        <p>new</p>
+        <p>About</p>
+
+
+    </div>
+</div>
+
+<h1>Opacity</h1>
+<div style="display:flex">
+    <div><image src="download.jpeg"alt="web"></div>
+    <div><image src="download (1).jpeg"alt="web"></div>
+    <div><image src="3download.jpeg"alt="web"></div>
+</div>
+
+
+<h1>Image Gallery</h1>
+<div class="gallery">
+    <a href="coffee1.jpeg">
+        <img src="coffee1.jpeg" alt="coffee" width="300px;height=300px">
+
+    </a>
+</div>
+
+<div class="gallery">
+    <a href="coffee2.jpeg">
+        <img src="coffee2.jpeg" alt="coffee" width="300px;height=300px">
+
+    </a>
+</div>
+<div class="gallery">
+    <a href="coffee3.jpeg">
+        <img src="coffee3.jpeg" alt="coffee" width="300px;height=300px">
+
+    </a>
+</div>
+
+<div class="gallery">
+    <a href="coffee4.jpeg">
+        <img src="coffee4.jpeg" alt="coffee" width="300px;height=300px">
+
+    </a>
+</div>
+
+
+
+</body>
+</html>
